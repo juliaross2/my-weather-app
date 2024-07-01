@@ -1,4 +1,13 @@
+function handleError() {
+  let cityElement = document.querySelector("#weather-app-city");
+  cityElement.innerHTML = "City not found. Please try again";
+}
+
 function refreshWeather(response) {
+  if (!response.data.city) {
+    return handleError();
+  }
+
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#weather-app-city");
@@ -21,3 +30,5 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Kelowna");
