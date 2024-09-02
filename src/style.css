@@ -67,6 +67,7 @@ main {
 
 .weather-app-temp-container {
   display: flex;
+  margin-left: auto;
 }
 
 .weather-app-icon {
@@ -76,8 +77,7 @@ main {
 
 .weather-app-temp-unit {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .weather-app-temp {
@@ -87,8 +87,9 @@ main {
 }
 
 .weather-app-unit {
-  margin-top: 8px;
-  font-size: 28px;
+  font-size: 28px; /* Adjust as needed */
+  margin-left: 8px; /* Space between temperature and unit */
+  align-self: flex-start; /* Aligns the unit with the top of the temperature */
 }
 
 .weather-forecast {
@@ -97,7 +98,7 @@ main {
   margin-top: 30px;
 }
 
-.weather-forcast-day {
+.weather-forecast-day {
   margin: 0 34px;
 }
 
@@ -128,4 +129,7 @@ main {
 
 footer {
   border-top: 1px solid #eaf2ef;
+  padding: 30px 0 0 30px;
+  text-align: center;
+  color: #eaf2ef;
 }
